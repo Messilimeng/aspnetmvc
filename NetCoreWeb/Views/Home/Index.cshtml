@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    aaaas
+
+</body>
+<script>
+    $(function () {
+        $.get('/api/user/pagelist', function (obj) {
+            var html = ""
+            for (var i of obj.aaData) {
+                html += '<p>' + i.EID + '</p>'
+            }
+            $("body").append(html)
+        })
+    })
+</script>
+</html>
